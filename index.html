@@ -653,19 +653,12 @@ footer .legal{
       </div>
       <div>
         <div class="video-frame" id="videoFrame">
-          <!--
-            Drop your video here. Two ways:
-            1) Self-hosted MP4: <video src="reel.mp4" controls poster="poster.jpg" playsinline></video>
-            2) YouTube / Vimeo: <iframe src="https://player.vimeo.com/video/XXXXX?autoplay=1" allowfullscreen></iframe>
-          -->
-          <div class="placeholder" id="videoPlaceholder" role="button" tabindex="0" aria-label="Play reel">
-            <div>
-              <div class="play" aria-hidden="true"></div>
-              <div class="lbl"><em>Play · 1:32</em></div>
-            </div>
-          </div>
+          <iframe src="https://www.instagram.com/reel/DZcaZtms4vM/embed/"
+            frameborder="0" scrolling="no" allowtransparency="true"
+            allow="autoplay; encrypted-media; fullscreen"
+            style="width:100%;height:100%;border:0;display:block"></iframe>
         </div>
-        <div class="video-cap"><span>Behind the look — S/S 26</span><span>Film by the studio</span></div>
+        <div class="video-cap"><span>Behind the look — @rejillin</span><span>Via Instagram</span></div>
       </div>
     </div>
 
@@ -1198,14 +1191,6 @@ stage.addEventListener('mouseenter', () => clearInterval(autoTimer));
 stage.addEventListener('mouseleave', () => autoTimer = setInterval(() => show(idx+1), 6500));
 
 /* ---------- video placeholder click → swap to embed ---------- */
-const ph = document.getElementById('videoPlaceholder');
-const frame = document.getElementById('videoFrame');
-function activateVideo(){
-  // Replace with the studio's actual reel.
-  frame.innerHTML = '<iframe src="https://player.vimeo.com/video/76979871?autoplay=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
-}
-ph.addEventListener('click', activateVideo);
-ph.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); activateVideo(); }});
 
 /* ---------- scroll-to anchor for booking pills ---------- */
 document.querySelectorAll('[data-scroll]').forEach(a => {
